@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Destilería Clásica</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600%7CSource+Code+Pro" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+
+    <!-- Configuración de skel -->
+    <script>
+        skel.init({
+            prefix: 'css/style',
+            preloadStyleSheets: true,
+            resetCSS: true,
+            boxModel: 'border',
+            grid: { gutters: 30 },
+            breakpoints: {
+                wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+                narrow: { range: '481-1199', containers: 960 },
+                mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+            }
+        });
+
+        $(function() {
+            $('#main-nav > ul').dropotron({ offsetY: -10 });
+        });
+    </script>
+
+    <!-- Estilos del formulario -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header_container">        
+    <div class="container">
+        <div id="header" class="row">
+            <div class="12u">
+                <div class="transparent">
+                    <h1><a href="index.html">Destilería Clásica</a></h1>
+                </div>
+            </div>
+
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">La Destilería</a>
+                        <ul>
+                            <li><a href="apage.html">Historia</a></li>
+                            <li><a href="anotherpage.html">Productos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>    
+</div>
+
+<div id="site_content">        
+    <div class="container">
+        <div class="row">
+            <section class="8u">
+                <h2>Ponte en contacto con nosotros</h2>
+                <p>Si deseas más información sobre nuestros destilados artesanales, puedes escribirnos o visitarnos.</p>
+
+                <h3>Información de contacto</h3>
+                <p><strong>Email:</strong> info@destileriaclasica.com</p>
+                <p><strong>Teléfono:</strong> +34 600 123 456</p>
+                <p><strong>Dirección:</strong> Calle Tradición 12, España</p>
+
+                <!-- FORMULARIO -->
+                <h3>Formulario de contacto</h3>
+                <form action="http://endor.josedomingo.org/josedom/resultado.php" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+                <!-- FIN FORMULARIO -->
+            </section>
+        </div>
+    </div>
+</div>
+
+<div id="footer_container">
+    <div class="container">            
+        <footer>
+            <p>&copy; 2026 Destilería Clásica</p>
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
