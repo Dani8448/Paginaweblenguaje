@@ -354,23 +354,79 @@ table tr td {
   border-top: 1px solid #FFF;
 }
 
-@font-face { 
-  font-family: Droid Sans; 
-  src: url('../fonts/DroidSans-webfont.eot'); 
-  src: local("Droid Sans"), url('../fonts/DroidSans-webfont.woff'); 
-} 
-
-@font-face { 
-  font-family: News Cycle; 
-  src: url('../fonts/NewsCycle-Regular.eot'); 
-  src: local("News Cycle"), url('../fonts/NewsCycle-Regular.ttf'); 
-} 
-
-body {
-  background: #FFF url(../images/pattern.png) repeat;
-  color: #FFF;
-  font: normal .90em 'Droid Sans', arial, sans-serif;
-  line-height: 2em;
+/* Estilos del formulario de contacto */
+.contact-form {
+    background: #f9f9f9;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-top: 20px;
 }
 
-/* Todo tu CSS completo pegado aquí */
+.contact-form .form-group { 
+    margin-bottom: 15px; 
+}
+
+.contact-form label { 
+    display:block; 
+    font-weight:600; 
+    margin-bottom:5px; 
+    color:#333; 
+}
+
+.contact-form input, .contact-form textarea {
+    width:100%; 
+    padding:10px 12px; 
+    border:1px solid #ccc; 
+    border-radius:6px;
+    font-size:1em; 
+    font-family:inherit; 
+    box-sizing:border-box; 
+    transition:0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #6c5ce7; 
+    outline:none; 
+    box-shadow:0 0 5px rgba(108,92,231,0.4);
+}
+
+.contact-form .btn-submit {
+    background-color:#6c5ce7; 
+    color:white; 
+    font-weight:600;
+    padding:12px 25px; 
+    border:none; 
+    border-radius:6px; 
+    cursor:pointer; 
+    transition:0.3s;
+}
+
+.contact-form .btn-submit:hover { 
+    background-color:#5a4bcc; 
+}
+
+/* Tabla de productos */
+table.productos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table.productos th,
+table.productos td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+table.productos th {
+    background-color: #f4f4f471;
+}
+
+table.productos img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
