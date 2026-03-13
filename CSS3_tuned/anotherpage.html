@@ -1,127 +1,134 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Destilería Clásica - Productos</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro" rel="stylesheet" />
-		<!--[if lte IE 8]><script src="html5shiv.js" type="text/javascript"></script><![endif]-->
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>		
-		<script src="js/skel.min.js">
-		{
-			prefix: 'css/style',
-			preloadStyleSheets: true,
-			resetCSS: true,
-			boxModel: 'border',
-			grid: { gutters: 30 },
-			breakpoints: {
-				wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
-				narrow: { range: '481-1199', containers: 960 },
-				mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
-			}
-		}
-		</script>
-		<script>
-			$(function() {
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Destilería Clásica - Productos</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600%7CSource+Code+Pro" rel="stylesheet">
 
-				// Note: make sure you call dropotron on the top level <ul>
-				$('#main-nav > ul').dropotron({ 
-					offsetY: -10 // Nudge up submenus by 10px to account for padding
-				});
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
 
-			});
-		</script>
-		<script>
-			// DOM ready
-			$(function() {
-    
-			// Create the dropdown base
-			$("<select />").appendTo("nav");
-   
-			// Create default option "Go to..."
-			$("<option />", {
-				"selected": "selected",
-				"value"   : "",
-				"text"    : "Menu"
-			}).appendTo("nav select");
-   
-			// Populate dropdown with menu items
-			$("nav a").each(function() {
-			var el = $(this);
-			$("<option />", {
-				"value"   : el.attr("href"),
-				"text"    : el.text()
-			}).appendTo("nav select");
-			});
-   
-			// To make dropdown actually work
-			// To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
-			$("nav select").change(function() {
-				window.location = $(this).find("option:selected").val();
-			});
-  
-			});
-		</script>	
-	</head>
-	<body>
-		<div id="header_container">		
-		    <div class="container">
-			<!-- Header -->
-				<div id="header" class="row">
-					<div class="12u">
-						<div class="transparent">
-							<h1><a href="index.html">Destilería Clásica</a></h1>
-							<h2>Catálogo de Productos</h2>
-					    </div>
-						<nav id="main-nav">
-	<ul>
-		<li><a href="index.html">Home</a></li>
-		<li>
-			<a href="#">La Destilería</a>
-			<ul>
-				<li><a href="apage.html">Historia</a></li>
-			</ul>
-		</li>
-		<li><a href="contacto.html">Contacto</a></li>
-	</ul>
-</nav>
-					</div>
-				</div>
-			</div>	
-        </div>		
-</nav>
-		<div id="site_content">		
-			<div class="container">			
-				
-			<!-- Features -->
-				<div class="row">
-					<section class="8u">
-						
-					<!-- Banner -->							
-						
-						<h2>Nuestros Destilados</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</section>
+    <script>
+        skel.init({
+            prefix: 'css/style',
+            preloadStyleSheets: true,
+            resetCSS: true,
+            boxModel: 'border',
+            grid: { gutters: 30 },
+            breakpoints: {
+                wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+                narrow: { range: '481-1199', containers: 960 },
+                mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+            }
+        });
 
-					
+        $(function () {
+            $('#main-nav > ul').dropotron({ offsetY: -10 });
+        });
+    </script>
 
-					
-				</div>
-		    </div>
-		</div>		
-		<div id="footer_container">
-			<div class="container">			
-			<!-- Footer -->
-				<footer>
-					<p><img src="images/twitter.png" alt="twitter" />&nbsp;<img src="images/facebook.png" alt="facebook" />&nbsp;<img src="images/rss.png" alt="rss" /></p>
-					<p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="apage.html">A Page</a> | <a href="anotherpage.html">Another Page</a> | <a href="contacto.html">Contact Us</a></p>
-					<p>Copyright &copy; CSS3_tuned | <a href="http://skeljs.org/">skel.js</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
-				</footer>		
-			</div>
-        </div>		
-	</body>
+    <style>
+        /* Estilos para la tabla en lugar de atributos obsoletos */
+        table.productos {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        table.productos th,
+        table.productos td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        table.productos th {
+            background-color: #f4f4f4;
+        }
+        table.productos img {
+            width: 50px;
+            height: auto;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header con menú -->
+<header id="header_container">
+    <div class="container">
+        <div id="header" class="row">
+            <div class="12u">
+                <h1><a href="index.html">Destilería Clásica</a></h1>
+                <h2>Catálogo de Productos</h2>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#">La Destilería</a>
+                            <ul>
+                                <li><a href="apage.html">Historia</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<div id="site_content">
+    <div class="container">
+        <section class="8u">
+            <h2>Nuestros Destilados</h2>
+
+            <!-- Tabla de productos con imágenes junto al precio -->
+            <table class="productos">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ron Clásico</td>
+                        <td>Ron añejado 12 años, aroma suave y un toque maritimo</td>
+                        <td>€25 <img src="images/ron.jpg" alt="Ron Clásico"></td>
+                    </tr>
+                    <tr>
+                        <td>Whisky Tradicional</td>
+                        <td>Whisky de malta, sabor intenso y complejo</td>
+                        <td>€30 <img src="images/whisky.jpg" alt="Whisky Tradicional"></td>
+                    </tr>
+                    <tr>
+                        <td>Licor de Café</td>
+                        <td>Licor dulce con notas de café natural</td>
+                        <td>€18 <img src="images/licor.png" alt="Licor de Café"></td>
+                    </tr>
+                    <tr>
+                        <td>Ginebra Premium</td>
+                        <td>Ginebra artesanal con botánicos seleccionados</td>
+                        <td>€28 <img src="images/ginebra.jpg" alt="Ginebra Premium"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer_container">
+    <div class="container">
+        <footer>
+            <p>&copy; 2024 Destilería Clásica. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</div>
+
+</body>
 </html>
