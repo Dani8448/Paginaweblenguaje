@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pagina nueva</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600%7CSource+Code+Pro" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+
+    <script>
+    skel.init({
+        prefix: 'css/style',
+        preloadStyleSheets: true,
+        resetCSS: true,
+        boxModel: 'border',
+        grid: { gutters: 30 },
+        breakpoints: {
+            wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+            narrow: { range: '481-1199', containers: 960 },
+            mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+        }
+    });
+
+    $(function() {
+        $('#main-nav > ul').dropotron({ offsetY: -10 });
+    });
+    </script>
+</head>
+<body>
+    <!-- Header con menú -->
+    <header id="header_container">
+        <div class="container">
+            <div id="header" class="row">
+                <div class="12u">
+                    <h1><a href="index.html">Pagina Nueva</a></h1>
+                    <nav id="main-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a href="#">La Destilería</a>
+                                <ul>
+                                    <li><a href="apage.html">Historia</a></li>
+                                    <li><a href="anotherpage.html">Productos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div id="site_content">
+        <div class="container">
+            <section class="12u">
+
+
+                <h2>Imagen</h2>
+
+                 <div style="text-align:center; margin:30px 0;">
+                <a href="https://es.wikipedia.org/wiki/Whisky"> <img src="images/whisky.jpg"
+                     alt="Whisky"
+                     style="max-width:60%; height:auto; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+            </div></a>
+
+                <p> En esta imagen vemos una de las botellas fabricadas por nosotros,whisky de la mas alta calidad.</p>
+
+                <h3>Tecnologías</h3>
+                <ol>
+                    <li>Uso de IA </li>
+                    <li>Servidores para almanacenar base de datos</li>
+                    <li>Uso de json </li>
+                    <li>Red 5G</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+
+<div id="site_content">
+    <div class="container">
+        <section class="8u">
+            <h2>Nuestros Destilados descontinuados</h2>
+
+            <table class="productos descontinuados">
+                <thead>
+                    <tr>
+                        <th colspan="2">Producto y descrpcion </th>
+                        <th>Fecha</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ron Clásico edicion  20 aniversario </td>
+                        <td>Ron añejado 12 años, aroma suave y un toque maritimo</td>
+                        <td>Lanzado en 2012</td>
+                        <td>descontinuado </td>
+                    </tr>
+                    <tr>
+                        <td>Whisky Tradicional edicion oro</td>
+                        <td>Whisky de malta, sabor intenso y complejo</td>
+                        <td>Lanzado en 2015</td>
+                        <td>descontinuado </td>
+                    </tr>
+                    <tr>
+                        <td>Licor de Café edicion colacao</td>
+                        <td>Licor dulce con notas de café natural</td>
+                        <td>Lanzado en 2018</td>
+                        <td>descontinuado </td>
+                    </tr>
+                    <tr>
+                        <td>Ginebra Premium edicion paris</td>
+                        <td>Ginebra artesanal con botánicos seleccionados</td>
+                        <td>Lanzado en 2024</td>
+                        <td>Descontinuado</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+</div>
+
+
+
+<div id="site_content">        
+    <div class="container">
+        <div class="row">
+            <section class="8u">
+
+                <h3>Formulario de licor</h3>
+                <form action="http://endor.josedomingo.org/josedom/resultado.php" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="elegir">Elige whisky o ron:</label>
+                        <input type="radio">
+                         <input type="radio">
+                    </div>
+                     <div class="form-group">
+                        <label for="asunto">Aceptar terminos y condiciones:</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="10" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
